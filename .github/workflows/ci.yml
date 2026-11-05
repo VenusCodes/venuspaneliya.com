@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build | tee build.log
+        env:
+          SITE_URL: https://venuspaneliya.com
+      - name: Check build output
+        run: grep -q "Built 104 pages, 29 posts, 8 projects, 52 stack pages" build.log
