@@ -3,7 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   SITE_URL = "https://venuspaneliya.com"
 
 # Headers and redirects come from dist/_headers and dist/_redirects (written by the build).
