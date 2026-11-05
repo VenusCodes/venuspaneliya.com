@@ -1,0 +1,97 @@
+{
+  "n": "03",
+  "slug": "video-pipeline-aws",
+  "name": "Video pipeline on AWS",
+  "result": "60% less manual editing",
+  "category": "cloud",
+  "techs": [
+    "aws",
+    "aws-lambda",
+    "sqs",
+    "s3",
+    "nodejs",
+    "react"
+  ],
+  "note": "A serverless pipeline for a crowdsourced video platform: contributors record on their phones, and uploads are transcoded and assembled into branded videos without anyone moving files by hand. Built for ShoutOut.",
+  "problem": "Every crowdsourced submission needed manual uploading, transcoding, review and assembly. It worked for a few hundred users and broke down beyond that, and the team spent more time moving files than improving the product.",
+  "approach": [
+    {
+      "title": "Event-driven",
+      "text": "S3 uploads trigger Lambda functions, orchestrated through SQS."
+    },
+    {
+      "title": "Async processing",
+      "text": "Heavy transcoding runs in background workers, so the app stays responsive under load."
+    },
+    {
+      "title": "Zero ops",
+      "text": "No servers to manage: it scales with traffic and idles near zero cost between bursts."
+    },
+    {
+      "title": "Durable state",
+      "text": "Job state, automatic retries and dead-letter handling, so failures are never silent."
+    },
+    {
+      "title": "Live dashboard",
+      "text": "A React dashboard shows each submission’s status at every stage."
+    }
+  ],
+  "results": [
+    {
+      "value": "60%",
+      "label": "less manual work"
+    },
+    {
+      "value": "1,000+",
+      "label": "active users"
+    },
+    {
+      "value": "0",
+      "label": "servers to manage"
+    }
+  ],
+  "features": [
+    "Video templates with intro, contributor and outro segments",
+    "Contributor invites by QR code and link",
+    "Record from a phone, no app needed",
+    "Clips, photos, playlists and compilations",
+    "Live status for every submission"
+  ],
+  "testimonial": {
+    "quote": "His communication was clear, regular and fast.",
+    "name": "John Greenwood",
+    "role": "Tech lead, ShoutOut"
+  },
+  "images": [
+    {
+      "src": "/assets/projects/video-pipeline-aws-01.webp",
+      "thumb": "/assets/projects/video-pipeline-aws-01-sm.webp",
+      "alt": "Video pipeline on AWS: Project workspace: template, contributor invites by QR code and link, and incoming videos. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Project workspace: template, contributor invites by QR code and link, and incoming videos"
+    },
+    {
+      "src": "/assets/projects/video-pipeline-aws-02.webp",
+      "thumb": "/assets/projects/video-pipeline-aws-02-sm.webp",
+      "alt": "Video pipeline on AWS: Contributors record a testimonial on their phone from a shared link. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Contributors record a testimonial on their phone from a shared link"
+    },
+    {
+      "src": "/assets/projects/video-pipeline-aws-03.webp",
+      "thumb": "/assets/projects/video-pipeline-aws-03-sm.webp",
+      "alt": "Video pipeline on AWS: Template builder for intro, contributor and outro segments. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Template builder for intro, contributor and outro segments"
+    },
+    {
+      "src": "/assets/projects/video-pipeline-aws-04.webp",
+      "thumb": "/assets/projects/video-pipeline-aws-04-sm.webp",
+      "alt": "Video pipeline on AWS: Published episode with its clips and branded template. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Published episode with its clips and branded template"
+    },
+    {
+      "src": "/assets/projects/video-pipeline-aws-05.webp",
+      "thumb": "/assets/projects/video-pipeline-aws-05-sm.webp",
+      "alt": "Video pipeline on AWS: A contributor profile card with a recorded intro, from a test project. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "A contributor profile card with a recorded intro, from a test project"
+    }
+  ]
+}

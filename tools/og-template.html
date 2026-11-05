@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}body{width:1200px;height:630px;overflow:hidden;background:#F6F5F1;font-family:Geist,sans-serif;color:#111317}
+.w{position:relative;height:630px;padding:64px 72px;display:flex;flex-direction:column;border-bottom:10px solid #111317}
+.wm{position:absolute;right:-50px;top:140px;width:420px}
+.logo{height:46px;width:auto;align-self:flex-start}
+.k{margin-top:48px;font:500 24px/1 'Geist Mono';color:#B93A0B}
+.t{margin-top:18px;max-width:900px;font-weight:600;font-size:64px;line-height:1.04;letter-spacing:-.035em}
+.t.long{font-size:52px}.t.xl{font-size:44px}
+.s{margin-top:22px;max-width:820px;font-size:27px;line-height:1.35;color:#565B63}
+.f{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font:500 21px/1 'Geist Mono';color:#565B63}
+.cov{position:absolute;right:56px;top:150px;width:470px;border:1px solid #DCDAD3;border-radius:10px;box-shadow:0 20px 50px rgba(17,19,23,.14)}
+.cov.portrait{width:300px;right:90px;top:110px}
+.has-cov .t,.has-cov .s{max-width:560px}.has-cov .t{font-size:52px}
+.tl{position:absolute;right:90px;top:170px;width:230px;height:230px;display:grid;place-items:center;background:#fff;border:1px solid #DCDAD3;border-radius:24px}
+.tl svg{width:130px;height:130px}.tl .line{fill:none;stroke:#111317;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.has-tl .t,.has-tl .s{max-width:700px}
+</style></head><body><div class="w" id="w"></div>
+<script src="/js/techicons.js"></script>
+<script>
+var q=new URLSearchParams(location.search), t=q.get('t')||'', k=q.get('k')||'', s=q.get('s')||'', cov=q.get('cov'), icon=q.get('icon');
+var I=window.TECH_ICONS, side='', w=document.getElementById('w');
+if(cov){side='<img class="cov'+(cov.indexOf('venus-paneliya')>-1?' portrait':'')+'" src="'+cov+'">';w.classList.add('has-cov');}
+else if(icon){var b=I.brand[icon];side='<div class="tl"><svg viewBox="0 0 24 24">'+(b?'<path fill="#111317" d="'+b+'"/>':'<g class="line">'+(I.line[icon]||'')+'</g>')+'</svg></div>';w.classList.add('has-tl');}
+else side='<img class="wm" src="/assets/vmark.svg">';
+var cls=t.length>70?'xl':t.length>44?'long':'';
+w.innerHTML=side+'<img class="logo" src="/assets/logo-primary.svg"><p class="k">'+k+'</p><h1 class="t '+cls+'">'+t+'</h1>'+(s?'<p class="s">'+s+'</p>':'')+'<p class="f"><span>Venus Paneliya, full-stack AI engineer</span><span>Prototype in. Production out.</span></p>';
+</script></body></html>

@@ -1,0 +1,57 @@
+{
+  "n": "08",
+  "slug": "nonprofit-learning-platform",
+  "name": "Non-profit learning platform",
+  "result": "Under $50 a month to run",
+  "category": "cloud",
+  "techs": [
+    "auth"
+  ],
+  "relatedPost": "edtech-on-a-non-profit-budget",
+  "note": "An online learning platform for kids, built for a non-profit: interactive math exercises, a teacher dashboard and read-only parent access, on serverless infrastructure.",
+  "problem": "The founder had a clear vision and a budget that was a fraction of what most agencies would quote. Cutting features was the obvious answer; prioritising differently was the better one.",
+  "approach": [
+    {
+      "title": "Three launch features",
+      "text": "Only what mattered for launch went in. Community, gamification, advanced analytics and notifications went onto a post-launch list."
+    },
+    {
+      "title": "Learning first",
+      "text": "Interactive math exercises kids can complete on their own. If this did not work well, nothing else mattered."
+    },
+    {
+      "title": "Teacher dashboard",
+      "text": "Simple progress tracking: who completed what, and where they struggled."
+    },
+    {
+      "title": "Parent access",
+      "text": "A read-only view of their child’s progress. No editing, no complex permissions."
+    },
+    {
+      "title": "Serverless and simple auth",
+      "text": "Resources scale with usage, and secure email and password sign-in saved about a week of work."
+    }
+  ],
+  "results": [
+    {
+      "value": "<$50",
+      "label": "a month for the first 500 users"
+    },
+    {
+      "value": "60-70%",
+      "label": "lower infrastructure cost than traditional hosting"
+    },
+    {
+      "value": "On time",
+      "label": "launch, with a foundation that did not need rebuilding"
+    }
+  ],
+  "features": [
+    "Interactive math exercises",
+    "Teacher progress dashboard",
+    "Read-only parent view",
+    "Secure email and password sign-in",
+    "Serverless infrastructure that scales with usage"
+  ],
+  "images": []
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="tokens.css"><style>
+*{box-sizing:border-box;margin:0}
+body{width:1600px;height:1000px;overflow:hidden;background:var(--paper);font-family:Geist,sans-serif;color:var(--ink)}
+.num{font:500 22px/1 'Geist Mono';color:var(--signal-ink)}
+.res{font:500 24px/1.35 'Geist Mono';color:var(--signal-ink);letter-spacing:-.01em}
+.shot{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}
+/* A: plate */
+.A{position:relative;height:1000px}
+.A .wm{position:absolute;left:-230px;top:20px;width:980px}
+.A .side{position:absolute;left:72px;top:88px;bottom:72px;width:330px;display:flex;flex-direction:column;gap:18px}
+.A .name{font:600 44px/1.08 Geist;letter-spacing:-.03em}
+.A .logo{margin-top:auto;width:300px}
+.A .win{position:absolute;right:64px;top:190px;width:1100px;height:619px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 4px rgba(17,19,23,.06),0 24px 60px rgba(17,19,23,.12)}
+/* B: browser */
+.B{padding:56px 80px 0;height:1000px;display:flex;flex-direction:column}
+.B .win{flex:1;border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(17,19,23,.10);display:flex;flex-direction:column}
+.B .bar{height:56px;display:flex;align-items:center;gap:16px;padding:0 20px;background:var(--paper-sunken);border-bottom:1px solid var(--line)}
+.B .url{flex:1;max-width:620px;margin:0 auto;height:34px;border-radius:999px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:500 16px 'Geist Mono';color:var(--ink-muted)}
+.B .url b{color:var(--ink);font-weight:500}
+.B .body{flex:1;min-height:0}
+.B .foot{position:absolute;left:0;right:0;bottom:0;height:0}
+.B{position:relative}.B .badge{position:absolute;right:120px;bottom:40px;padding:16px 22px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 10px 30px rgba(17,19,23,.14)}.B .badge img{display:block;width:240px}
+.B .tag{position:absolute;right:104px;top:80px;padding:10px 16px;background:#fff;border:1px solid var(--line);border-radius:8px;font:500 18px Geist;box-shadow:0 8px 24px rgba(17,19,23,.10)}
+/* C: caption band */
+.C{height:1000px;display:flex;flex-direction:column}
+.C .body{height:860px;overflow:hidden;border-bottom:1px solid var(--line)}
+.C .band{flex:1;display:flex;align-items:center;justify-content:space-between;padding:0 64px;background:var(--paper)}
+.C .logo{width:330px}
+.C .meta{text-align:right}
+.C .name{font:600 30px/1.2 Geist;letter-spacing:-.02em}
+
+/* D: slim branded border */
+.D{width:1600px;height:1000px;display:grid;grid-template-rows:78px 1fr 78px;grid-template-columns:44px 1fr 44px;background:var(--paper)}
+.D .top,.D .bot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:0 44px;gap:32px}
+.D .top img{height:40px;display:block}
+.D .what{display:flex;align-items:baseline;gap:16px;font:600 24px/1 Geist;letter-spacing:-.015em;white-space:nowrap}
+.D .what .num{font-size:18px}
+.D .what .res{font-size:20px}
+.D .mid{grid-column:2;min-height:0;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden;background:#fff}
+.D .contact{display:flex;gap:26px;font:500 17px/1 'Geist Mono';color:var(--ink-muted);white-space:nowrap}
+.D .contact b{color:var(--ink);font-weight:500}
+.D .cta{display:flex;align-items:center;gap:10px;height:46px;padding:0 22px;border-radius:6px;background:var(--signal);color:var(--on-signal);font:600 19px/1 Geist;white-space:nowrap}
+.D .cta svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2}
+</style></head><body><div id="root"></div>
+<script>
+const q=new URLSearchParams(location.search), v=q.get('v'), img=q.get('img'), name=q.get('name'), res=q.get('res'), n=q.get('n'), slug=q.get('slug'), fit=q.get('fit')||'cover', bg=q.get('bg')||'#fff';
+const r=document.getElementById('root');
+if(v==='D') r.innerHTML=`<div class="D"><div class="top"><img src="logo-primary.svg"><p class="what"><span class="num">${n}</span>${name}<span class="res">${res}</span></p></div><div class="mid" style="background:${bg}"><img class="shot" style="object-fit:${fit};object-position:${fit==='cover'?'top center':'center'}" src="${img}"></div><div class="bot"><p class="contact"><span>+91 74059 41008</span><span>venuspaneliya25@gmail.com</span><span>cal.com/venuspaneliya/intro</span></p><p class="cta">Send me your prototype’s link<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></p></div></div>`;
+if(v==='A') r.innerHTML=`<div class="A"><img class="wm" src="vmark.svg"><div class="side"><p class="num">${n}</p><h1 class="name">${name}</h1><p class="res">${res}</p><img class="logo" src="logo-primary.svg"></div><div class="win"><img class="shot" src="${img}"></div></div>`;
+if(v==='B') r.innerHTML=`<div class="B"><div class="win"><div class="bar"><div class="url">venuspaneliya.com/<b>work/${slug}</b></div></div><div class="body"><img class="shot" src="${img}"></div></div><div class="badge"><img src="logo-primary.svg"></div></div>`;
+if(v==='C') r.innerHTML=`<div class="C"><div class="body"><img class="shot" src="${img}"></div><div class="band"><img class="logo" src="logo-primary.svg"><div class="meta"><p class="name">${name}</p><p class="res">${res}</p></div></div></div>`;
+</script></body></html>

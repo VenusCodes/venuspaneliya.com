@@ -1,0 +1,109 @@
+{
+  "n": "05",
+  "slug": "immigration-case-portal",
+  "name": "Immigration case portal",
+  "result": "40% fewer support calls",
+  "category": "saas",
+  "techs": [
+    "react",
+    "nodejs",
+    "postgresql",
+    "auth"
+  ],
+  "note": "A multi-role case management platform for an immigration practice: clients, staff and admins in one system, replacing spreadsheets and email.",
+  "problem": "Every case lived in spreadsheets and email. Clients, paralegals and attorneys chased status through different channels, and manual handoffs caused errors and a steady stream of “where’s my case?” messages.",
+  "approach": [
+    {
+      "title": "Roles",
+      "text": "Separate views for applicants, attorneys, case managers and admins, with access enforced on the server."
+    },
+    {
+      "title": "One source of truth",
+      "text": "A normalised PostgreSQL case model replaced the scattered spreadsheets."
+    },
+    {
+      "title": "Self-service",
+      "text": "Clients check status, upload documents and get updates without emailing staff."
+    },
+    {
+      "title": "Document workflows",
+      "text": "Checklists and review stages per case type, so nothing gets missed."
+    },
+    {
+      "title": "Audit trail",
+      "text": "Every status change is recorded for compliance and accountability."
+    }
+  ],
+  "results": [
+    {
+      "value": "~40%",
+      "label": "fewer support queries"
+    },
+    {
+      "value": "1",
+      "label": "system instead of spreadsheets and email"
+    },
+    {
+      "value": "Full",
+      "label": "audit trail of every status change"
+    }
+  ],
+  "features": [
+    "Client dashboard with active cases and pending documents",
+    "Applications list with status per case",
+    "Document vault with verified, pending and missing states",
+    "Step-by-step case creation",
+    "Activity timeline per case",
+    "Peer sessions and chat",
+    "Email and Google sign-in with consent capture"
+  ],
+  "testimonial": {
+    "quote": "Venus brings both technical depth and product thinking.",
+    "name": "Dhruvini G.",
+    "role": "Founder, SaaS product (Upwork)"
+  },
+  "images": [
+    {
+      "src": "/assets/projects/immigration-case-portal-01.webp",
+      "thumb": "/assets/projects/immigration-case-portal-01-sm.webp",
+      "alt": "Immigration case portal: Client dashboard: active cases, pending documents, messages and calls. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Client dashboard: active cases, pending documents, messages and calls"
+    },
+    {
+      "src": "/assets/projects/immigration-case-portal-02.webp",
+      "thumb": "/assets/projects/immigration-case-portal-02-sm.webp",
+      "alt": "Immigration case portal: Applications list with status for every case. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Applications list with status for every case"
+    },
+    {
+      "src": "/assets/projects/immigration-case-portal-03.webp",
+      "thumb": "/assets/projects/immigration-case-portal-03-sm.webp",
+      "alt": "Immigration case portal: Document management with verified, pending and missing documents. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Document management with verified, pending and missing documents"
+    },
+    {
+      "src": "/assets/projects/immigration-case-portal-04.webp",
+      "thumb": "/assets/projects/immigration-case-portal-04-sm.webp",
+      "alt": "Immigration case portal: Case view with the action needed and a full activity timeline. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Case view with the action needed and a full activity timeline"
+    },
+    {
+      "src": "/assets/projects/immigration-case-portal-05.webp",
+      "thumb": "/assets/projects/immigration-case-portal-05-sm.webp",
+      "alt": "Immigration case portal: Create a new case, step by step. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Create a new case, step by step"
+    },
+    {
+      "src": "/assets/projects/immigration-case-portal-06.webp",
+      "thumb": "/assets/projects/immigration-case-portal-06-sm.webp",
+      "alt": "Immigration case portal: Peer session chat with session rules. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Peer session chat with session rules"
+    },
+    {
+      "src": "/assets/projects/immigration-case-portal-07.webp",
+      "thumb": "/assets/projects/immigration-case-portal-07-sm.webp",
+      "alt": "Immigration case portal: Applicant sign-up with consent and Google sign-in. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Applicant sign-up with consent and Google sign-in"
+    }
+  ]
+}

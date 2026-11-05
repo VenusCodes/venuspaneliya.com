@@ -1,0 +1,89 @@
+{
+  "n": "02",
+  "slug": "ai-form-builder",
+  "name": "AI form builder",
+  "result": "Forms in seconds, not minutes",
+  "category": "ai-engineering",
+  "techs": [
+    "openai-api",
+    "nextjs",
+    "react",
+    "typescript",
+    "supabase",
+    "postgresql",
+    "row-level-security",
+    "token-and-cost-controls",
+    "location"
+  ],
+  "note": "A multi-tenant, white-label form builder: describe a form in one plain sentence and get a complete, branded, working form, with e-signatures and server-side token caps that keep AI costs flat.",
+  "problem": "Form tools were rigid, generic or priced for enterprise, and none used AI to remove field-by-field building. The output also had to be reliable enough for paying tenants: a strict, valid schema every time.",
+  "approach": [
+    {
+      "title": "Prompt to schema",
+      "text": "A tightly constrained OpenAI prompt returns a strict JSON form schema, validated on the server before anything renders."
+    },
+    {
+      "title": "Tenant isolation",
+      "text": "Row-level security in Supabase and PostgreSQL keeps each workspace’s forms, submissions and branding apart."
+    },
+    {
+      "title": "One renderer",
+      "text": "A single white-label renderer turns any schema into a branded, responsive form, with no custom code per customer."
+    },
+    {
+      "title": "Signatures and audit",
+      "text": "Signature capture and submission storage with audit timestamps for compliance-sensitive forms."
+    },
+    {
+      "title": "Cost control",
+      "text": "Cached schemas and tuned prompts keep the token cost of each generation predictable."
+    }
+  ],
+  "results": [
+    {
+      "value": "<10s",
+      "label": "typical prompt-to-form generation"
+    },
+    {
+      "value": "min → sec",
+      "label": "form creation time"
+    },
+    {
+      "value": "RLS",
+      "label": "per-tenant data isolation"
+    }
+  ],
+  "features": [
+    "Forms generated from one sentence",
+    "E-signatures with audit timestamps",
+    "Liveness check before sensitive submissions",
+    "Location capture and address fields",
+    "Media and file uploads",
+    "Save and return later, one-time links"
+  ],
+  "testimonial": {
+    "quote": "Venus built exactly what we envisioned and honestly, better.",
+    "name": "Punit K.",
+    "role": "Founder, AI SaaS platform (Upwork)"
+  },
+  "images": [
+    {
+      "src": "/assets/projects/ai-form-builder-01.webp",
+      "thumb": "/assets/projects/ai-form-builder-01-sm.webp",
+      "alt": "AI form builder: Landing page: AI-powered forms and reporting, compliance first. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Landing page: AI-powered forms and reporting, compliance first"
+    },
+    {
+      "src": "/assets/projects/ai-form-builder-02.webp",
+      "thumb": "/assets/projects/ai-form-builder-02-sm.webp",
+      "alt": "AI form builder: A generated compliance form with save and return, location capture, e-signature and media upload. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "A generated compliance form with save and return, location capture, e-signature and media upload"
+    },
+    {
+      "src": "/assets/projects/ai-form-builder-03.webp",
+      "thumb": "/assets/projects/ai-form-builder-03-sm.webp",
+      "alt": "AI form builder: Liveness check before a sensitive form is submitted. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Liveness check before a sensitive form is submitted"
+    }
+  ]
+}

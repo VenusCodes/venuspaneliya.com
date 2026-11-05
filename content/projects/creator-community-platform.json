@@ -1,0 +1,104 @@
+{
+  "n": "01",
+  "slug": "creator-community-platform",
+  "name": "Creator community platform",
+  "result": "$10K+ a month in payouts",
+  "category": "payments",
+  "techs": [
+    "react",
+    "nodejs",
+    "mongodb",
+    "stripe-connect",
+    "auth"
+  ],
+  "note": "A creator community platform with communities, courses, chat, a feed and live streams, rebuilt after its first developer left. Automated creator payouts with a payout ledger and a referral system.",
+  "caseStudy": {
+    "title": "Payouts that stopped going missing.",
+    "context": "A creator community with 1,000+ paying members, rebuilt after its first developer left with a half-built Stripe Connect integration.",
+    "role": "Lead full-stack engineer",
+    "timeline": "December 2025 to now",
+    "domain": "Payments, creator economy",
+    "problem": "Payout state lived only in Stripe’s webhooks. One dropped webhook meant one missed creator payout. Money was coming in, but creators were not reliably paid.",
+    "decision": "I moved payout state into the platform’s own database, with Stripe as the rail, not the record.",
+    "results": [
+      {
+        "value": "$10K+",
+        "label": "paid out automatically each month"
+      },
+      {
+        "value": "1,000+",
+        "label": "active members"
+      },
+      {
+        "value": "+25%",
+        "label": "organic sign-ups from the referral system"
+      },
+      {
+        "value": "0",
+        "label": "missed payouts since the ledger shipped"
+      }
+    ]
+  },
+  "approach": [
+    {
+      "title": "Audit",
+      "text": "Mapped every Stripe Connect event and traced where money and status got stuck."
+    },
+    {
+      "title": "Webhooks",
+      "text": "A listener verifies every payout event. A failed transfer is flagged, retried with exponential backoff, and the ops team is told if it fails twice."
+    },
+    {
+      "title": "Owned state",
+      "text": "The database owns onboarding and payout status; it is never inferred from Stripe at request time."
+    },
+    {
+      "title": "Gated payouts",
+      "text": "Payouts fire only when an account is fully verified."
+    },
+    {
+      "title": "Dunning",
+      "text": "Retry windows and email nudges for failed onboarding and failed subscription charges."
+    }
+  ],
+  "features": [
+    "Communities with member referral links",
+    "Academy courses with progress tracking",
+    "Channels, direct messages and member roles",
+    "Feed with posts and comments",
+    "Live streams",
+    "Role-based access across 20+ community tiers"
+  ],
+  "images": [
+    {
+      "src": "/assets/projects/creator-community-platform-01.webp",
+      "thumb": "/assets/projects/creator-community-platform-01-sm.webp",
+      "alt": "Creator community platform: Landing page: start a community, teach, monetise and grow it. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Landing page: start a community, teach, monetise and grow it"
+    },
+    {
+      "src": "/assets/projects/creator-community-platform-02.webp",
+      "thumb": "/assets/projects/creator-community-platform-02-sm.webp",
+      "alt": "Creator community platform: Community page with video, member referral and course links. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Community page with video, member referral and course links"
+    },
+    {
+      "src": "/assets/projects/creator-community-platform-03.webp",
+      "thumb": "/assets/projects/creator-community-platform-03-sm.webp",
+      "alt": "Creator community platform: Academy: course lessons with progress tracking. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Academy: course lessons with progress tracking"
+    },
+    {
+      "src": "/assets/projects/creator-community-platform-04.webp",
+      "thumb": "/assets/projects/creator-community-platform-04-sm.webp",
+      "alt": "Creator community platform: Community chat with channels, direct messages and member roles. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Community chat with channels, direct messages and member roles"
+    },
+    {
+      "src": "/assets/projects/creator-community-platform-05.webp",
+      "thumb": "/assets/projects/creator-community-platform-05-sm.webp",
+      "alt": "Creator community platform: Community feed with posts, likes and comments. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Community feed with posts, likes and comments"
+    }
+  ]
+}

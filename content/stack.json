@@ -1,0 +1,624 @@
+{
+  "groups": [
+    {
+      "name": "AI",
+      "category": "ai-engineering",
+      "items": [
+        {
+          "slug": "openai-api",
+          "name": "OpenAI API",
+          "icon": "sparkles",
+          "about": "I use the OpenAI API where a product needs output it can trust. In the AI form builder, a constrained prompt returns a strict JSON schema, and the server validates it before anything renders.",
+          "uses": [
+            "Structured output, validated on the server",
+            "Prompts tuned for a predictable token cost",
+            "Cached results so a repeat request costs nothing"
+          ]
+        },
+        {
+          "slug": "claude-api",
+          "name": "Claude API",
+          "icon": "claude",
+          "about": "I build with the Claude API for reading and writing tasks inside SaaS products, behind the same guardrails I use for every model: server-side calls, validation, rate limits and token caps.",
+          "uses": [
+            "Keys stay on the server, never in the browser",
+            "Per-tenant rate limits and token caps",
+            "Typed, validated responses before anything is stored"
+          ]
+        },
+        {
+          "slug": "rag",
+          "name": "RAG",
+          "icon": "search",
+          "about": "Retrieval-augmented generation lets a model answer from a customer’s own data. I keep retrieval tenant-aware, so one customer’s documents never reach another customer’s answers.",
+          "uses": [
+            "Chunking and embedding pipelines",
+            "Retrieval scoped to the tenant",
+            "Answers that point back to their source"
+          ]
+        },
+        {
+          "slug": "agents",
+          "name": "Agents",
+          "icon": "workflow",
+          "about": "I build agents as small, observable steps with clear limits on what each tool may do, so every run can be traced, capped and stopped.",
+          "uses": [
+            "Tool calls with explicit permissions",
+            "Step and cost limits per run",
+            "A log line for every step"
+          ]
+        },
+        {
+          "slug": "mcp",
+          "name": "MCP",
+          "icon": "mcp",
+          "about": "Model Context Protocol servers give an AI client a typed, permissioned way into a product’s data and actions. I build them on the product’s own API, with the same access rules.",
+          "uses": [
+            "MCP servers over an existing API",
+            "Scoped tools and resources",
+            "Auth that matches the product’s roles"
+          ]
+        },
+        {
+          "slug": "token-and-cost-controls",
+          "name": "Token and cost controls",
+          "icon": "gauge",
+          "about": "AI features get expensive quietly. I put server-side token caps, caching and per-tenant budgets in place so AI cost stays flat as usage grows, as in the AI form builder.",
+          "uses": [
+            "Token caps per request and per tenant",
+            "Caching generated output",
+            "Cost tracked per feature"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prototype tools",
+      "category": "saas",
+      "items": [
+        {
+          "slug": "cursor",
+          "name": "Cursor",
+          "icon": "cursor",
+          "about": "I use Cursor every day. I also take over apps that were mostly written in it, and the audit starts with what it tends to skip: tenancy, rate limits and error handling.",
+          "uses": [
+            "Week-one audit of a Cursor-written codebase",
+            "Refactors that keep what works",
+            "Tests around the parts that touch money and data"
+          ]
+        },
+        {
+          "slug": "v0",
+          "name": "v0",
+          "icon": "v0",
+          "about": "v0 produces good-looking Next.js screens fast. I connect those screens to a real backend with auth, data isolation and payments.",
+          "uses": [
+            "v0 components turned into a maintainable Next.js app",
+            "Real data and auth behind the UI",
+            "Accessibility and performance checks"
+          ]
+        },
+        {
+          "slug": "bolt",
+          "name": "Bolt",
+          "icon": "zap",
+          "about": "Bolt gets a full-stack prototype running in minutes. I add what a paying customer needs: security, multi-tenancy and payments that reconcile.",
+          "uses": [
+            "Moving a Bolt prototype into a real repo and pipeline",
+            "Server-side validation and rate limits",
+            "Environments for staging and production"
+          ]
+        },
+        {
+          "slug": "lovable",
+          "name": "Lovable",
+          "icon": "wand",
+          "about": "Lovable apps usually sit on Supabase. Before real users arrive I add row-level security, server-side validation and separate environments.",
+          "uses": [
+            "Row-level security on every table",
+            "Secrets out of the client",
+            "Payments and webhooks that survive retries"
+          ]
+        },
+        {
+          "slug": "chatgpt-code",
+          "name": "ChatGPT code",
+          "icon": "message",
+          "about": "Code pasted from ChatGPT often works on its own and breaks in context. Taking over code an AI tool wrote is most of my work: I read it, audit it and keep what works.",
+          "uses": [
+            "Reading and mapping the whole codebase first",
+            "A written risk report before any rewrite",
+            "Fixes in order of what breaks first"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Frontend",
+      "category": null,
+      "items": [
+        {
+          "slug": "react",
+          "name": "React",
+          "icon": "react",
+          "about": "React is the front end of almost every system on this site: the creator platform, the immigration portal, the quote engine, the video dashboard and the fantasy sports platform.",
+          "uses": [
+            "Dashboards and multi-step flows",
+            "Live status and real-time updates",
+            "Responsive layouts for desktop, tablet and phone"
+          ]
+        },
+        {
+          "slug": "nextjs",
+          "name": "Next.js",
+          "icon": "nextjs",
+          "about": "I use Next.js for SaaS products that need server rendering, API routes and good SEO. The AI form builder runs on it.",
+          "uses": [
+            "Server components and API routes",
+            "Auth and per-tenant theming",
+            "SEO and fast first loads"
+          ]
+        },
+        {
+          "slug": "javascript",
+          "name": "JavaScript",
+          "icon": "javascript",
+          "about": "JavaScript is what every project here runs on, in the browser and on Node.js, and where I debug most production issues.",
+          "uses": [
+            "Modern ES modules and async code",
+            "Browser APIs for camera, media and location",
+            "Debugging across browser, API and database"
+          ]
+        },
+        {
+          "slug": "typescript",
+          "name": "TypeScript",
+          "icon": "typescript",
+          "about": "I write new code in TypeScript and add types to inherited JavaScript as I go, starting with the parts that handle money and user data.",
+          "uses": [
+            "Typed API contracts between front end and back end",
+            "Gradual typing of an existing codebase",
+            "Schema validation at the edges"
+          ]
+        },
+        {
+          "slug": "html-css",
+          "name": "HTML and CSS",
+          "icon": "html-css",
+          "about": "Semantic HTML and plain CSS come first: responsive pages that work on desktop, tablet and phone, and forms anyone can use with a keyboard. This site is hand-built in both.",
+          "uses": [
+            "Semantic, accessible markup",
+            "Responsive layouts from 320px up",
+            "Design tokens as CSS variables"
+          ]
+        },
+        {
+          "slug": "tailwind",
+          "name": "Tailwind CSS",
+          "icon": "tailwind",
+          "about": "Tailwind for fast, consistent UI work, mapped to a design system’s tokens rather than one-off values.",
+          "uses": [
+            "Design tokens in the Tailwind theme",
+            "Shared components instead of copied classes",
+            "Dark and light themes from one set of tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Backend and APIs",
+      "category": null,
+      "items": [
+        {
+          "slug": "nodejs",
+          "name": "Node.js",
+          "icon": "nodejs",
+          "about": "Node.js runs my backends: the creator platform’s payout webhooks, the quote engine’s APIs, the video pipeline’s Lambda functions and the fantasy platform’s real-time server.",
+          "uses": [
+            "REST and real-time servers",
+            "Webhook handlers that are safe to retry",
+            "Background jobs and queues"
+          ]
+        },
+        {
+          "slug": "express",
+          "name": "Express",
+          "icon": "express",
+          "about": "Express when I want a small, explicit server: routing, validation, auth middleware and error handling I can read in one sitting.",
+          "uses": [
+            "REST endpoints with validation",
+            "Auth and role middleware",
+            "Consistent error responses and logging"
+          ]
+        },
+        {
+          "slug": "rest-apis",
+          "name": "REST APIs",
+          "icon": "plug",
+          "about": "I design and consume REST APIs and integrate third-party services: payment gateways, an insurer’s quote API, review platforms and email. The quote engine is REST from front to back.",
+          "uses": [
+            "API design with versioning and clear errors",
+            "Third-party integrations with retries and timeouts",
+            "Debugging the API between a front end and its data"
+          ]
+        },
+        {
+          "slug": "graphql",
+          "name": "GraphQL",
+          "icon": "graphql",
+          "about": "GraphQL where a client needs flexible reads across many related objects, with resolvers that respect the same access rules as the REST endpoints.",
+          "uses": [
+            "Schemas that mirror the domain",
+            "Batching to avoid slow nested queries",
+            "Field-level access control"
+          ]
+        },
+        {
+          "slug": "websockets",
+          "name": "WebSockets and Socket.io",
+          "icon": "websockets",
+          "about": "Real-time features with Socket.io: live scores pushed to thousands of fantasy sports users at once, live chat and live job status.",
+          "uses": [
+            "Live updates to thousands of clients",
+            "Rooms and per-user channels",
+            "Reconnects that do not lose state"
+          ]
+        },
+        {
+          "slug": "auth",
+          "name": "Authentication and access control",
+          "icon": "shield",
+          "about": "Sign-in with email, Google and OAuth, JWT sessions, and role-based access enforced on the server. The immigration portal has client, staff and admin roles; the creator platform has 20+ community tiers.",
+          "uses": [
+            "Email, Google and OAuth sign-in",
+            "JWT sessions and sign-in shared across subdomains",
+            "Roles enforced on the server, not just hidden in the UI"
+          ]
+        },
+        {
+          "slug": "strapi",
+          "name": "Strapi",
+          "icon": "strapi",
+          "about": "Strapi as a headless CMS when a team needs to edit content without a deploy: content models, roles and an API the front end can rely on.",
+          "uses": [
+            "Content models and relations",
+            "Editor roles and permissions",
+            "Strapi APIs consumed by React and mobile apps"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data",
+      "category": "saas",
+      "items": [
+        {
+          "slug": "postgresql",
+          "name": "PostgreSQL",
+          "icon": "postgresql",
+          "about": "PostgreSQL is my default for SaaS data. The AI form builder, the immigration portal and the quote engine run on it, with indexes and row-level security doing real work.",
+          "uses": [
+            "Normalised models with an audit trail",
+            "Indexes and denormalised hot paths",
+            "Row-level security for tenants"
+          ]
+        },
+        {
+          "slug": "mysql",
+          "name": "MySQL",
+          "icon": "mysql",
+          "about": "MySQL for relational data in existing production systems: writing and tuning SQL, finding the slow query and keeping schemas tidy.",
+          "uses": [
+            "Writing and troubleshooting SQL queries",
+            "Indexes and query plans",
+            "Migrations on a live database"
+          ]
+        },
+        {
+          "slug": "mongodb",
+          "name": "MongoDB",
+          "icon": "mongodb",
+          "about": "MongoDB for document data, including the creator platform’s payout ledger and referral system.",
+          "uses": [
+            "Schema design for document data",
+            "A ledger as the record of every payout",
+            "Aggregations for dashboards"
+          ]
+        },
+        {
+          "slug": "dynamodb",
+          "name": "DynamoDB",
+          "icon": "database",
+          "about": "DynamoDB for high-throughput key-value data next to Lambda functions, with access patterns designed before the table.",
+          "uses": [
+            "Single-table design from access patterns",
+            "Lambda reads and writes",
+            "Streams for downstream jobs"
+          ]
+        },
+        {
+          "slug": "supabase",
+          "name": "Supabase",
+          "icon": "supabase",
+          "about": "Supabase gives me Postgres, auth and storage in one place. In the AI form builder it holds every workspace’s forms, submissions and branding, isolated with row-level security.",
+          "uses": [
+            "Auth and storage with policies",
+            "Row-level security per workspace",
+            "Taking over Supabase apps built with Lovable and Bolt"
+          ]
+        },
+        {
+          "slug": "redis",
+          "name": "Redis",
+          "icon": "redis",
+          "about": "Redis was the quote engine’s caching layer for rate tables and partial results, part of the work that took quotes from 10+ minutes to under 2.",
+          "uses": [
+            "Caching expensive lookups",
+            "Rate limits per tenant",
+            "Short-lived job and session state"
+          ]
+        },
+        {
+          "slug": "firebase",
+          "name": "Firebase",
+          "icon": "firebase",
+          "about": "Firebase for auth, real-time data and push notifications in mobile and web apps.",
+          "uses": [
+            "Firebase Auth",
+            "Real-time listeners",
+            "Cloud Messaging for push notifications"
+          ]
+        },
+        {
+          "slug": "row-level-security",
+          "name": "Row-level security",
+          "icon": "lock",
+          "about": "A tenant_id column only filters; one missed WHERE clause leaks data. Row-level security makes the database enforce isolation, which is how the AI form builder keeps workspaces apart.",
+          "uses": [
+            "Policies on every tenant table",
+            "Tenant context set per request",
+            "Tests that try to read another tenant’s rows"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "category": "payments",
+      "items": [
+        {
+          "slug": "stripe-connect",
+          "name": "Stripe Connect",
+          "icon": "stripe-connect",
+          "about": "Stripe Connect runs the creator platform’s payouts: $10K+ a month, automated. Payout state lives in the platform’s own database, with Stripe as the rail, not the record.",
+          "uses": [
+            "Idempotent webhook handlers for every Connect event",
+            "Payouts gated on fully verified accounts",
+            "Dunning and retries for failed charges"
+          ]
+        },
+        {
+          "slug": "paypal",
+          "name": "PayPal",
+          "icon": "paypal",
+          "about": "PayPal was one of two payment rails on the fantasy sports platform, reconciled against Authorize.net, for real-money deposits and withdrawals.",
+          "uses": [
+            "Deposits and withdrawals",
+            "Reconciliation across rails",
+            "Server-side checks on every money movement"
+          ]
+        },
+        {
+          "slug": "authorize-net",
+          "name": "Authorize.net",
+          "icon": "card",
+          "about": "Authorize.net was the second payment rail on the fantasy sports platform, behind atomic wallet operations so balances never drifted under load.",
+          "uses": [
+            "Card payments for a real-money product",
+            "Atomic wallet updates",
+            "Fraud checks and limits on the server"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud and DevOps",
+      "category": "cloud",
+      "items": [
+        {
+          "slug": "aws",
+          "name": "AWS",
+          "icon": "cloud",
+          "about": "Most of my production work runs on AWS, from serverless pipelines to app hosting. I hold the AWS Academy Cloud Foundations certification.",
+          "uses": [
+            "Serverless architecture with Lambda, SQS and S3",
+            "IAM scoped to each function",
+            "Costs that idle near zero between bursts"
+          ]
+        },
+        {
+          "slug": "aws-lambda",
+          "name": "AWS Lambda",
+          "icon": "function",
+          "about": "Lambda functions do the transcoding and assembly in the video pipeline: no servers to manage, scaling with traffic for 1,000+ users.",
+          "uses": [
+            "Event-driven functions from S3 and SQS",
+            "Async media processing",
+            "Retries and dead-letter handling"
+          ]
+        },
+        {
+          "slug": "sqs",
+          "name": "SQS",
+          "icon": "list",
+          "about": "SQS is the durable job queue between upload and processing in the video pipeline, so a failed job is retried, not lost.",
+          "uses": [
+            "Durable queues between steps",
+            "Dead-letter queues for failures",
+            "Back-pressure during traffic spikes"
+          ]
+        },
+        {
+          "slug": "s3",
+          "name": "S3",
+          "icon": "archive",
+          "about": "S3 stores uploads and output in the video pipeline, and each upload triggers the next step.",
+          "uses": [
+            "Upload triggers for pipelines",
+            "Per-tenant storage buckets",
+            "Signed URLs for private files"
+          ]
+        },
+        {
+          "slug": "gcp",
+          "name": "Google Cloud",
+          "icon": "gcp",
+          "about": "I support applications deployed across AWS and Google Cloud, and completed Google Cloud’s Integrate with Machine Learning APIs course.",
+          "uses": [
+            "Apps that span AWS and Google Cloud",
+            "Google Cloud machine learning APIs",
+            "Google sign-in and APIs"
+          ]
+        },
+        {
+          "slug": "docker",
+          "name": "Docker",
+          "icon": "docker",
+          "about": "Docker keeps development, staging and production the same, so the bug you fix locally is the bug in production.",
+          "uses": [
+            "Containers for APIs and workers",
+            "Compose files for local stacks",
+            "Reproducible builds in CI"
+          ]
+        },
+        {
+          "slug": "ci-cd",
+          "name": "CI/CD",
+          "icon": "ci-cd",
+          "about": "Every project ships through a pipeline: tests, builds and deploys on each merge, with GitHub Actions.",
+          "uses": [
+            "Tests and checks on every pull request",
+            "Automated deploys to staging and production",
+            "Fast rollbacks"
+          ]
+        },
+        {
+          "slug": "git",
+          "name": "Git",
+          "icon": "git",
+          "about": "Git and code review are how I work in an existing codebase: small branches, readable commits and a decision written down in every pull request.",
+          "uses": [
+            "Feature branches and pull requests",
+            "Code reviews",
+            "History that explains why, not just what"
+          ]
+        },
+        {
+          "slug": "heroku",
+          "name": "Heroku",
+          "icon": "server",
+          "about": "Heroku for simple hosting of Node.js apps and early-stage products that need to ship before they need their own infrastructure.",
+          "uses": [
+            "Node.js app hosting",
+            "Add-ons for Postgres and Redis",
+            "Moving apps off Heroku when they outgrow it"
+          ]
+        },
+        {
+          "slug": "monitoring",
+          "name": "Monitoring and debugging",
+          "icon": "activity",
+          "about": "I measure before I optimise. The quote engine fix started with profiling that found repeated lookups blocking every quote.",
+          "uses": [
+            "Profiling slow paths",
+            "Logs and alerts on errors and failed jobs",
+            "Production issue triage across front end, API and database"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mobile and BI",
+      "category": null,
+      "items": [
+        {
+          "slug": "react-native",
+          "name": "React Native",
+          "icon": "react-native",
+          "about": "React Native for iOS and Android apps that share logic and API clients with the React web app.",
+          "uses": [
+            "One codebase for iOS and Android",
+            "Shared API clients with the web app",
+            "Native camera, media and location"
+          ]
+        },
+        {
+          "slug": "capacitor",
+          "name": "Capacitor",
+          "icon": "capacitor",
+          "about": "I shipped a cross-platform mobile app with Capacitor at QuirkBees, wrapping a web app for iOS and Android.",
+          "uses": [
+            "Web apps shipped to iOS and Android",
+            "Native plugins for camera and files",
+            "App store builds"
+          ]
+        },
+        {
+          "slug": "ios",
+          "name": "iOS",
+          "icon": "ios",
+          "about": "I support and maintain iOS apps built with React Native and Capacitor, and troubleshoot where the app meets the API.",
+          "uses": [
+            "iOS builds and releases",
+            "Push notifications",
+            "Debugging app and API integration"
+          ]
+        },
+        {
+          "slug": "android",
+          "name": "Android",
+          "icon": "android",
+          "about": "I support and maintain Android apps built with React Native and Capacitor, from builds to Play Store releases.",
+          "uses": [
+            "Android builds and releases",
+            "Push notifications",
+            "Debugging app and API integration"
+          ]
+        },
+        {
+          "slug": "push-notifications",
+          "name": "Push notifications",
+          "icon": "bell",
+          "about": "Push and in-app notifications for status changes people care about, like a case update or a new message.",
+          "uses": [
+            "Firebase Cloud Messaging",
+            "In-app notification centres",
+            "Preferences so users can turn them off"
+          ]
+        },
+        {
+          "slug": "location",
+          "name": "Location and maps",
+          "icon": "mappin",
+          "about": "Location capture and address fields where a workflow needs them. The AI form builder can record where a form was submitted.",
+          "uses": [
+            "Browser and device geolocation",
+            "Address lookup fields",
+            "Location stored with a submission"
+          ]
+        },
+        {
+          "slug": "power-bi",
+          "name": "Power BI",
+          "icon": "chart",
+          "about": "I am learning Power BI on live BI projects, building reports on top of the data the products already collect.",
+          "uses": [
+            "Reports on product data",
+            "Data models for dashboards",
+            "Learning on live projects"
+          ]
+        }
+      ]
+    }
+  ]
+}

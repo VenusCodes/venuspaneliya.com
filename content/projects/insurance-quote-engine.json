@@ -1,0 +1,93 @@
+{
+  "n": "04",
+  "slug": "insurance-quote-engine",
+  "name": "Insurance quote engine",
+  "result": "From 10+ minutes to under 2",
+  "category": "fintech",
+  "techs": [
+    "react",
+    "nodejs",
+    "rest-apis",
+    "redis",
+    "postgresql",
+    "auth",
+    "monitoring"
+  ],
+  "note": "An SME business-insurance platform whose quote engine was rebuilt for near-instant quotes, with an insurer API integration, a payment gateway and sign-in shared across subdomains. Built at Logix Built Solutions.",
+  "problem": "Quotes took more than 10 minutes of synchronous lookups and recalculation. People abandoned the flow at the moment they were most ready to buy, so speed was the conversion problem, not a detail.",
+  "approach": [
+    {
+      "title": "Profiling",
+      "text": "Instrumented the flow and found repeated expensive lookups blocking every quote."
+    },
+    {
+      "title": "Caching",
+      "text": "A Redis layer for rate tables and partial results, so repeated work is skipped."
+    },
+    {
+      "title": "Parallel calls",
+      "text": "The four insurer API calls that ran one after another now run at the same time."
+    },
+    {
+      "title": "Database tuning",
+      "text": "Indexes and selective denormalisation on the data each quote depends on."
+    },
+    {
+      "title": "Streamed progress",
+      "text": "The UI streams progress, so a quote feels instant while it finishes."
+    }
+  ],
+  "results": [
+    {
+      "value": "<2 min",
+      "label": "quote delivery, down from 10+"
+    },
+    {
+      "value": "<30s",
+      "label": "for cached quotes"
+    },
+    {
+      "value": "~0",
+      "label": "support calls about speed"
+    }
+  ],
+  "features": [
+    "Quotes for liability, property and employee health cover",
+    "Insurer API integration",
+    "Payment gateway",
+    "Sign-in shared across subdomains",
+    "Product, FAQ and knowledge pages"
+  ],
+  "images": [
+    {
+      "src": "/assets/projects/insurance-quote-engine-01.webp",
+      "thumb": "/assets/projects/insurance-quote-engine-01-sm.webp",
+      "alt": "Insurance quote engine: Quote landing page, shown under a placeholder brand. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Quote landing page, shown under a placeholder brand"
+    },
+    {
+      "src": "/assets/projects/insurance-quote-engine-02.webp",
+      "thumb": "/assets/projects/insurance-quote-engine-02-sm.webp",
+      "alt": "Insurance quote engine: Business insurance products by category. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Business insurance products by category"
+    },
+    {
+      "src": "/assets/projects/insurance-quote-engine-03.webp",
+      "thumb": "/assets/projects/insurance-quote-engine-03-sm.webp",
+      "alt": "Insurance quote engine: How it works: risk, incidents and payouts. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "How it works: risk, incidents and payouts"
+    },
+    {
+      "src": "/assets/projects/insurance-quote-engine-04.webp",
+      "thumb": "/assets/projects/insurance-quote-engine-04-sm.webp",
+      "alt": "Insurance quote engine: Why insure here: policies, relationship manager, customisation. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Why insure here: policies, relationship manager, customisation"
+    },
+    {
+      "src": "/assets/projects/insurance-quote-engine-05.webp",
+      "thumb": "/assets/projects/insurance-quote-engine-05-sm.webp",
+      "alt": "Insurance quote engine: Frequently asked questions. Screenshot framed with venuspaneliya.com branding.",
+      "caption": "Frequently asked questions"
+    }
+  ]
+}

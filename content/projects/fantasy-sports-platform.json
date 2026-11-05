@@ -1,0 +1,59 @@
+{
+  "n": "07",
+  "slug": "fantasy-sports-platform",
+  "name": "Fantasy sports platform",
+  "result": "Real-money play at scale",
+  "category": "payments",
+  "techs": [
+    "react",
+    "nodejs",
+    "websockets",
+    "paypal",
+    "authorize-net"
+  ],
+  "note": "A high-traffic sports fantasy platform with live scoring and real-money deposits and withdrawals, built at Logix Built Solutions.",
+  "problem": "Thousands of people needed live scores during games, plus real-money deposits and withdrawals. Traffic surged when events started, and a payment bug would mean lost money and lost trust.",
+  "approach": [
+    {
+      "title": "Real-time scoring",
+      "text": "Socket.io pushes live score updates to thousands of clients at once."
+    },
+    {
+      "title": "Two payment rails",
+      "text": "PayPal and Authorize.net, reconciled against each other."
+    },
+    {
+      "title": "Transaction integrity",
+      "text": "Atomic wallet operations, so balances never drift under concurrent writes."
+    },
+    {
+      "title": "Spikes",
+      "text": "Tuned for the traffic surge at the start of live events."
+    },
+    {
+      "title": "Limits",
+      "text": "Server-side validation on every money movement."
+    }
+  ],
+  "results": [
+    {
+      "value": "1,000s",
+      "label": "of users on live scoring"
+    },
+    {
+      "value": "2",
+      "label": "payment rails, reconciled"
+    },
+    {
+      "value": "Real money",
+      "label": "deposits and withdrawals at scale"
+    }
+  ],
+  "features": [
+    "Live contests and scoring",
+    "Wallet with deposits and withdrawals",
+    "PayPal and Authorize.net payments",
+    "Server-side fraud checks and limits"
+  ],
+  "images": []
+}

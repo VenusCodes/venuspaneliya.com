@@ -1,0 +1,19 @@
+{
+  "name": "venuspaneliya-com",
+  "version": "1.0.0",
+  "description": "venuspaneliya.com: static site, CMS content and build",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "serve": "npx --yes serve dist -l 4000",
+    "cms": "npx --yes decap-server"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "jsdom": "^30.1.3"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}

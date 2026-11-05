@@ -1,0 +1,241 @@
+{
+  "categories": [
+    {
+      "slug": "payments",
+      "name": "Payments",
+      "intro": "Stripe Connect, PayPal and Authorize.net: creator payouts, payout ledgers and real-money play."
+    },
+    {
+      "slug": "ai-engineering",
+      "name": "AI engineering",
+      "intro": "OpenAI and Claude APIs, RAG, agents and MCP, with token and cost controls that keep AI spend flat."
+    },
+    {
+      "slug": "cloud",
+      "name": "Cloud",
+      "intro": "AWS Lambda, SQS and S3, Google Cloud, Docker and CI/CD, sized to the budget."
+    },
+    {
+      "slug": "fintech",
+      "name": "Fintech",
+      "intro": "Quote engines and payroll calculation, where a wrong number costs someone money."
+    },
+    {
+      "slug": "saas",
+      "name": "SaaS",
+      "intro": "Multi-tenancy, data isolation, roles and the architecture AI tools skip."
+    },
+    {
+      "slug": "security",
+      "name": "Security",
+      "intro": "Rate limits, tenant isolation, access control and what enterprise procurement asks for."
+    },
+    {
+      "slug": "founders",
+      "name": "Founders",
+      "intro": "Notes for founders on hiring, cost and checking a codebase without reading it."
+    }
+  ],
+  "metrics": [
+    {
+      "value": "$10K+",
+      "label": "Automated Stripe Connect payouts every month, across 1,000+ members"
+    },
+    {
+      "value": "8",
+      "label": "Systems live in production"
+    },
+    {
+      "value": "95%",
+      "label": "On-time delivery, leading five developers"
+    },
+    {
+      "value": "−60%",
+      "label": "Manual video editing for 1,000+ users"
+    },
+    {
+      "value": "<2 min",
+      "label": "Insurance quotes, down from 10+"
+    },
+    {
+      "value": "+25%",
+      "label": "Organic sign-ups from a referral system"
+    },
+    {
+      "value": "30%",
+      "label": "Fewer payroll calculation errors"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior full stack developer",
+      "org": "Arj Global",
+      "when": "March 2026 to now",
+      "where": "Remote, London",
+      "text": "Production architecture, security and compliance for AI-built SaaS. Shipped an AI form builder with server-side cost controls."
+    },
+    {
+      "title": "Full-stack consultant",
+      "org": "Independent",
+      "when": "October 2024 to now",
+      "where": "Remote",
+      "text": "Consultant for startups, including QuirkBees and ShoutOut. $10K+ monthly payouts, a payroll engine for 50+ SMEs."
+    },
+    {
+      "title": "Senior full stack developer and project manager",
+      "org": "Zion Elira IT Solutions",
+      "when": "February 2025 to February 2026",
+      "where": "Remote",
+      "text": "Led a team of five developers on AI-powered SaaS for international clients, owning architecture and sprint planning. 95% on-time delivery."
+    },
+    {
+      "title": "Senior software analyst",
+      "org": "QuirkBees Technologies",
+      "when": "October 2024 to February 2025",
+      "where": "Remote",
+      "text": "Architected a payroll engine for 50+ SMEs and shipped a cross-platform mobile app with Capacitor."
+    },
+    {
+      "title": "Software engineer",
+      "org": "Logix Built Solutions",
+      "when": "February 2023 to September 2024",
+      "where": "Surat, India",
+      "text": "Payment systems for a high-traffic sports gaming platform, full-stack ERP, real-time inventory and sales dashboards. Insurance quotes from 10+ minutes to under 2."
+    },
+    {
+      "title": "Summer intern",
+      "org": "Inkey IT Solutions",
+      "when": "2022",
+      "where": "India",
+      "text": "Internship during my engineering degree."
+    }
+  ],
+  "education": [
+    {
+      "label": "Education",
+      "value": "B.E. Computer Science and Engineering, R.N.G. Patel Institute of Technology (affiliated to GTU), 2018 to 2022. CGPA 9.29."
+    },
+    {
+      "label": "Certified",
+      "value": "AWS Academy Cloud Foundations, Amazon Web Services (June 2025)"
+    },
+    {
+      "label": "Certified",
+      "value": "Integrate with Machine Learning APIs, Google Cloud (October 2020)"
+    },
+    {
+      "label": "Learning",
+      "value": "Power BI, on live BI projects"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "The kind of engineer you can trust to own a feature end-to-end.",
+      "name": "Nagarjun Danda",
+      "role": "Founder, Arj Global (client)",
+      "initials": "ND"
+    },
+    {
+      "quote": "His communication was clear, regular and fast.",
+      "name": "John Greenwood",
+      "role": "Tech lead, ShoutOut",
+      "initials": "JG"
+    },
+    {
+      "quote": "Venus built exactly what we envisioned and honestly, better.",
+      "name": "Punit K.",
+      "role": "Founder, AI SaaS platform (Upwork)",
+      "initials": "PK"
+    },
+    {
+      "quote": "Venus brings both technical depth and product thinking.",
+      "name": "Dhruvini G.",
+      "role": "Founder, SaaS product (Upwork)",
+      "initials": "DG"
+    }
+  ],
+  "offers": [
+    {
+      "name": "Hourly",
+      "what": "An audit or a focused fix.",
+      "facts": [
+        {
+          "label": "Starts with",
+          "value": "A one-week production audit"
+        },
+        {
+          "label": "Best for",
+          "value": "A prototype that needs a risk report, or one thing fixed properly"
+        }
+      ]
+    },
+    {
+      "name": "Monthly retainer",
+      "what": "An embedded senior engineer.",
+      "facts": [
+        {
+          "label": "Rhythm",
+          "value": "Two-week sprints, async updates"
+        },
+        {
+          "label": "Best for",
+          "value": "A product that needs a senior engineer every week"
+        }
+      ]
+    },
+    {
+      "name": "Full-time remote",
+      "what": "Full-stack web and mobile, AI or solutions roles.",
+      "facts": [
+        {
+          "label": "Stack",
+          "value": "React, Node.js, JavaScript and TypeScript, REST APIs, SQL and MySQL, AWS Lambda and DynamoDB, Google Cloud, Strapi, iOS and Android"
+        },
+        {
+          "label": "Regions",
+          "value": "Americas, Europe, Middle East, APAC"
+        },
+        {
+          "label": "Now",
+          "value": "Senior developer at Arj Global"
+        }
+      ]
+    }
+  ],
+  "process": [
+    {
+      "title": "Audit",
+      "text": "Week one. A written risk report on security, tenancy, payments and AI cost."
+    },
+    {
+      "title": "Stabilise",
+      "text": "Fix what breaks first: rate limits, isolation, payout state, token caps."
+    },
+    {
+      "title": "Ship",
+      "text": "Features in two-week sprints, every decision written down."
+    },
+    {
+      "title": "Own or hand over",
+      "text": "Stay on as your engineer, or hand over code the next person can read."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can you take over code an AI tool wrote?",
+      "answer": "Yes, that is most of my work. I read it, audit it, and keep what works."
+    },
+    {
+      "question": "Do you work with non-technical founders?",
+      "answer": "Yes. You get plain-language updates and every decision in writing."
+    },
+    {
+      "question": "What does an audit cover?",
+      "answer": "Security, tenancy, payments and AI cost, in a written report."
+    },
+    {
+      "question": "Do you work on web and mobile?",
+      "answer": "Yes. React and Node.js on the web, and iOS and Android apps with React Native and Capacitor, on the same APIs."
+    }
+  ]
+}
