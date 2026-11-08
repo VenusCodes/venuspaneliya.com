@@ -446,7 +446,7 @@ ${pageHead({ title: 'Send me your prototype’s link.', lede: 'I read every mess
       <li>${ic('phone')}<span><span class="reach__k">Phone and WhatsApp</span><a href="${S.tel}">${S.phone}</a><br><a href="${S.whatsapp}" rel="noopener">Message me on WhatsApp</a></span></li>
       <li>${ic('calendar')}<span><span class="reach__k">20-minute intro call</span>${S.booking ? `<a href="${esc(S.booking)}" rel="noopener">Book a 20-minute call</a>` : ph('BOOKING LINK TO CONFIRM')}</span></li>
     </ul>
-    <ul class="elsewhere"><li><a class="vp-btn vp-btn--sm" href="${S.whatsapp}" rel="noopener">${ic('whatsapp')}WhatsApp</a></li><li><a class="vp-btn vp-btn--sm" href="${S.linkedin}" rel="noopener">${ic('linkedin')}LinkedIn</a></li><li><a class="vp-btn vp-btn--sm" href="${S.github}" rel="noopener">${ic('github')}GitHub</a></li><li><a class="vp-btn vp-btn--sm" href="${S.upwork}" rel="noopener">${ic('briefcase')}Upwork</a></li></ul>
+    <ul class="elsewhere"><li><a class="vp-btn vp-btn--sm" href="${S.whatsapp}" rel="noopener">${ic('whatsapp')}WhatsApp</a></li><li><a class="vp-btn vp-btn--sm" href="${S.linkedin}" rel="noopener">${ic('linkedin')}LinkedIn</a></li><li><a class="vp-btn vp-btn--sm" href="${S.github}" rel="noopener">${ic('github')}GitHub</a></li><li><a class="vp-btn vp-btn--sm" href="${S.upwork}" rel="noopener">${ic('briefcase')}Upwork</a></li><li><a class="vp-btn vp-btn--sm" href="/Venus_Paneliya_Resume.pdf" target="_blank" rel="noopener">${ic('arrow-up-right')}Resume</a></li></ul>
   </div>
   <div class="enquiry">
     <form class="enquiry__form" id="enquiry" novalidate>

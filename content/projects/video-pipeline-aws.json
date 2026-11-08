@@ -12,7 +12,7 @@
     "nodejs",
     "react"
   ],
-  "note": "A serverless pipeline for a crowdsourced video platform: contributors record on their phones, and uploads are transcoded and assembled into branded videos without anyone moving files by hand. Built for ShoutOut.",
+  "note": "A serverless pipeline for a crowdsourced video platform: contributors record on their phones, and uploads are transcoded and assembled into branded videos without anyone moving files by hand.",
   "problem": "Every crowdsourced submission needed manual uploading, transcoding, review and assembly. It worked for a few hundred users and broke down beyond that, and the team spent more time moving files than improving the product.",
   "approach": [
     {
@@ -60,7 +60,7 @@
   "testimonial": {
     "quote": "His communication was clear, regular and fast.",
     "name": "John Greenwood",
-    "role": "Tech lead, ShoutOut"
+    "role": "Tech lead, crowdsourced video platform"
   },
   "images": [
     {
