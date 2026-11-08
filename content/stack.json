@@ -69,6 +69,17 @@
             "Caching generated output",
             "Cost tracked per feature"
           ]
+        },
+        {
+          "slug": "tiktoken",
+          "name": "tiktoken (token validation)",
+          "icon": "gauge",
+          "about": "tiktoken counts tokens the same way OpenAI models do, so the server can check a prompt against its cap before the request is sent and paid for.",
+          "uses": [
+            "Counting tokens before a model call",
+            "Rejecting oversized prompts on the server",
+            "Budgets that match what the provider bills"
+          ]
         }
       ]
     },
@@ -202,6 +213,17 @@
             "Shared components instead of copied classes",
             "Dark and light themes from one set of tokens"
           ]
+        },
+        {
+          "slug": "redux-toolkit",
+          "name": "Redux Toolkit",
+          "icon": "database",
+          "about": "Redux Toolkit keeps shared client state predictable in larger React apps, with slices, async thunks and one place to look when state goes wrong.",
+          "uses": [
+            "Slices and typed selectors",
+            "Async thunks for API calls",
+            "Normalised state for lists and caches"
+          ]
         }
       ]
     },
@@ -284,6 +306,28 @@
             "Content models and relations",
             "Editor roles and permissions",
             "Strapi APIs consumed by React and mobile apps"
+          ]
+        },
+        {
+          "slug": "webhooks",
+          "name": "Webhooks",
+          "icon": "plug",
+          "about": "Webhooks connect a product to payment providers and other services. I make every handler verify its signature and survive retries and duplicate events.",
+          "uses": [
+            "Signature verification on every event",
+            "Idempotent handlers safe to retry",
+            "Event logs for replay and debugging"
+          ]
+        },
+        {
+          "slug": "microservices",
+          "name": "Microservices",
+          "icon": "workflow",
+          "about": "I split a system into services only where a boundary earns its cost, such as a queue-driven worker next to the main API, and keep each service small and observable.",
+          "uses": [
+            "Service boundaries drawn around data ownership",
+            "Queues between services instead of chained calls",
+            "Tracing a request across services"
           ]
         }
       ]
@@ -534,6 +578,39 @@
             "Logs and alerts on errors and failed jobs",
             "Production issue triage across front end, API and database"
           ]
+        },
+        {
+          "slug": "amazon-ec2",
+          "name": "Amazon EC2",
+          "icon": "server",
+          "about": "EC2 is for workloads that need a long-running server, such as background workers and APIs that do not fit Lambda, sized to the load and the budget.",
+          "uses": [
+            "Instances sized to the workload",
+            "Security groups and IAM scoped tightly",
+            "Deploys and restarts without downtime"
+          ]
+        },
+        {
+          "slug": "vercel",
+          "name": "Vercel",
+          "icon": "cloud",
+          "about": "Vercel is where I host Next.js apps, with preview deployments for every pull request and environment variables kept per environment.",
+          "uses": [
+            "Preview deployments per pull request",
+            "Separate staging and production environments",
+            "Edge and serverless functions for Next.js"
+          ]
+        },
+        {
+          "slug": "netlify",
+          "name": "Netlify",
+          "icon": "cloud",
+          "about": "Netlify hosts static and Jamstack sites, including this one, with builds on every push and headers and redirects kept in code.",
+          "uses": [
+            "Builds on every push",
+            "Headers and redirects in version control",
+            "Deploy previews before release"
+          ]
         }
       ]
     },
@@ -616,6 +693,78 @@
             "Reports on product data",
             "Data models for dashboards",
             "Learning on live projects"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Practices",
+      "category": null,
+      "items": [
+        {
+          "slug": "jest",
+          "name": "Jest",
+          "icon": "activity",
+          "about": "Jest for unit and integration tests around the code that handles money and user data, run on every pull request.",
+          "uses": [
+            "Unit tests for business rules",
+            "API and webhook handler tests",
+            "Tests that run in CI on every pull request"
+          ]
+        },
+        {
+          "slug": "agile-scrum",
+          "name": "Agile/Scrum",
+          "icon": "workflow",
+          "about": "I run work in short sprints with clear scope, a written plan and regular demos. I led a team of five developers at 95% on-time delivery.",
+          "uses": [
+            "Sprint planning and backlog grooming",
+            "Demos and retrospectives",
+            "Estimates that account for risk"
+          ]
+        },
+        {
+          "slug": "jira",
+          "name": "Jira",
+          "icon": "list",
+          "about": "Jira for tracking sprints, bugs and releases in teams that already work in it.",
+          "uses": [
+            "Boards and sprints",
+            "Bug triage and priorities",
+            "Reports on delivery progress"
+          ]
+        },
+        {
+          "slug": "linear",
+          "name": "Linear",
+          "icon": "list",
+          "about": "Linear for fast, low-friction issue tracking on small product teams.",
+          "uses": [
+            "Cycles and issue triage",
+            "Issues linked to pull requests",
+            "Roadmaps for small teams"
+          ]
+        },
+        {
+          "slug": "notion",
+          "name": "Notion",
+          "icon": "archive",
+          "about": "Notion for specs, decision logs and handover notes that non-technical founders can read.",
+          "uses": [
+            "Specs and decision logs",
+            "Project wikis and handover notes",
+            "Shared roadmaps with clients"
+          ]
+        },
+        {
+          "slug": "confluence",
+          "name": "Confluence",
+          "icon": "archive",
+          "about": "Confluence for documentation in teams that use the Atlassian suite, kept next to the Jira tickets it explains.",
+          "uses": [
+            "Architecture and runbook pages",
+            "Requirements linked to Jira",
+            "Onboarding documentation"
           ]
         }
       ]

@@ -72,48 +72,27 @@
       "org": "Arj Global",
       "when": "March 2026 to now",
       "where": "Remote, London",
-      "text": "Production architecture, security and compliance for AI-built SaaS. Shipped an AI form builder with server-side cost controls."
+      "text": "Production architecture, security and compliance for AI-built SaaS. Built a multi-tenant AI form builder that turns one sentence into a server-validated form in under 10 seconds, with row-level security per tenant and server-side token caps that keep AI cost flat."
     },
     {
-      "title": "Full-stack consultant",
+      "title": "Full-stack consultant and technical project manager",
       "org": "Independent",
       "when": "October 2024 to now",
       "where": "Remote",
-      "text": "Consultant for startups, including QuirkBees and ShoutOut. $10K+ monthly payouts, a payroll engine for 50+ SMEs."
-    },
-    {
-      "title": "Senior full stack developer and project manager",
-      "org": "Zion Elira IT Solutions",
-      "when": "February 2025 to February 2026",
-      "where": "Remote",
-      "text": "Led a team of five developers on AI-powered SaaS for international clients, owning architecture and sprint planning. 95% on-time delivery."
-    },
-    {
-      "title": "Senior software analyst",
-      "org": "QuirkBees Technologies",
-      "when": "October 2024 to February 2025",
-      "where": "Remote",
-      "text": "Architected a payroll engine for 50+ SMEs and shipped a cross-platform mobile app with Capacitor."
+      "text": "Full-stack engineering and project management for startups and agencies, including QuirkBees Technologies and a crowdsourced video platform. Led a team of five developers on AI-powered SaaS at 95% on-time delivery. $10K+ monthly Stripe Connect payouts with zero missed, a payroll engine for 50+ SMEs with 30% fewer errors, and a serverless AWS video pipeline that cut manual editing by 60%."
     },
     {
       "title": "Software engineer",
       "org": "Logix Built Solutions",
       "when": "February 2023 to September 2024",
       "where": "Surat, India",
-      "text": "Payment systems for a high-traffic sports gaming platform, full-stack ERP, real-time inventory and sales dashboards. Insurance quotes from 10+ minutes to under 2."
-    },
-    {
-      "title": "Summer intern",
-      "org": "Inkey IT Solutions",
-      "when": "2022",
-      "where": "India",
-      "text": "Internship during my engineering degree."
+      "text": "Cut insurance quotes from 10+ minutes to under 2 with Redis caching, parallel insurer API calls and PostgreSQL tuning. Real-money payments on PayPal and Authorize.net with live scoring for thousands of users, plus a full-stack ERP with real-time dashboards."
     }
   ],
   "education": [
     {
       "label": "Education",
-      "value": "B.E. Computer Science and Engineering, R.N.G. Patel Institute of Technology (affiliated to GTU), 2018 to 2022. CGPA 9.29."
+      "value": "B.E. Computer Science and Engineering, R.N.G. Patel Institute of Technology (affiliated to GTU). CGPA 9.29."
     },
     {
       "label": "Certified",
@@ -121,7 +100,7 @@
     },
     {
       "label": "Certified",
-      "value": "Integrate with Machine Learning APIs, Google Cloud (October 2020)"
+      "value": "Google Cloud skill badges (19), including Deploy Kubernetes Applications and Use Machine Learning APIs"
     },
     {
       "label": "Learning",
@@ -138,7 +117,7 @@
     {
       "quote": "His communication was clear, regular and fast.",
       "name": "John Greenwood",
-      "role": "Tech lead, ShoutOut",
+      "role": "Tech lead, crowdsourced video platform",
       "initials": "JG"
     },
     {

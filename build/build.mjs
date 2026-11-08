@@ -84,7 +84,7 @@ const ogKey = ([n, a]) => a ? `${n}-${a}` : n;
 const PERSON_ID = PROD + '/#person', SITE_ID = PROD + '/#website';
 const person = {
   '@type': 'Person', '@id': PERSON_ID, name: 'Venus Paneliya', url: PROD + '/', image: abs('/' + S.portrait),
-  jobTitle: 'Full-stack AI engineer', description: 'Takes AI-built SaaS prototypes (Cursor, v0, Bolt, Lovable, ChatGPT code) and makes them production-grade: architecture, security, multi-tenancy and payments.',
+  jobTitle: 'Senior full-stack engineer', description: 'Takes AI-built SaaS prototypes (Cursor, v0, Bolt, Lovable, ChatGPT code) and makes them production-grade: architecture, security, multi-tenancy and payments.',
   email: 'mailto:' + S.email, telephone: '+917405941008',
   address: { '@type': 'PostalAddress', addressLocality: 'Surat', addressRegion: 'Gujarat', addressCountry: 'IN' },
   sameAs: [S.linkedin, S.github, S.upwork],
@@ -96,7 +96,7 @@ const person = {
     { '@type': 'EducationalOccupationalCredential', name: 'Integrate with Machine Learning APIs', credentialCategory: 'certificate', recognizedBy: { '@type': 'Organization', name: 'Google Cloud' } }
   ]
 };
-const website = { '@type': 'WebSite', '@id': SITE_ID, url: PROD + '/', name: 'venuspaneliya.com', description: 'Venus Paneliya, full-stack AI engineer. Prototype in. Production out.', inLanguage: 'en', publisher: { '@id': PERSON_ID }, author: { '@id': PERSON_ID } };
+const website = { '@type': 'WebSite', '@id': SITE_ID, url: PROD + '/', name: 'venuspaneliya.com', description: 'Venus Paneliya, senior full-stack engineer. Prototype in. Production out.', inLanguage: 'en', publisher: { '@id': PERSON_ID }, author: { '@id': PERSON_ID } };
 const crumbs = list => ({ '@type': 'BreadcrumbList', itemListElement: list.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: abs(p) })) });
 const itemList = (items) => ({ '@type': 'ItemList', numberOfItems: items.length, itemListElement: items.map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, url: abs(p) })) });
 function graphFor(r, meta) {
@@ -141,7 +141,7 @@ function graphFor(r, meta) {
 const L = (t, p) => `[${t}](${abs(p)})`;
 const contactMd = () => `## Contact\n\n- Email: ${S.email}${S.email2 ? ', ' + S.email2 : ''}\n- Phone and WhatsApp: ${S.phone} (${S.whatsapp.split('?')[0]})\n- Book a 20-minute intro call: ${S.booking}\n- LinkedIn: ${S.linkedin}\n- GitHub: ${S.github}\n- Upwork: ${S.upwork}\n`;
 function mdFor([n, a]) {
-  if (n === 'home') return `# Venus Paneliya, full-stack AI engineer\n\n> Prototype in. Production out. Your AI-built SaaS works in the demo. I make it work in production.\n\nI take AI-built SaaS prototypes (Cursor, v0, Bolt, Lovable, ChatGPT code) and make them production-grade: architecture, security, multi-tenancy and payments. Based in Surat, India. ${S.availability} Hire me hourly, on a monthly retainer, or full-time remote.\n\n## Results\n\n${W.METRICS.map(([v, l]) => `- **${v}**: ${l}`).join('\n')}\n\n## Work\n\n${W.PROJECTS.map(p => `- ${L(p.name, `/work/${p.slug}/`)}: ${p.result}. ${p.note}`).join('\n')}\n\n## Services\n\n${W.OFFERS.map(o => `- **${o.name}**: ${o.what}`).join('\n')}\n\n## Writing\n\n${W.POSTS.slice(0, 10).map(p => `- ${L(p.title, `/writing/${p.slug}/`)}`).join('\n')}\n\n${contactMd()}`;
+  if (n === 'home') return `# Venus Paneliya, senior full-stack engineer\n\n> Prototype in. Production out. Your AI-built SaaS works in the demo. I make it work in production.\n\nI take AI-built SaaS prototypes (Cursor, v0, Bolt, Lovable, ChatGPT code) and make them production-grade: architecture, security, multi-tenancy and payments. Based in Surat, India. ${S.availability} Hire me hourly, on a monthly retainer, or full-time remote.\n\n## Results\n\n${W.METRICS.map(([v, l]) => `- **${v}**: ${l}`).join('\n')}\n\n## Work\n\n${W.PROJECTS.map(p => `- ${L(p.name, `/work/${p.slug}/`)}: ${p.result}. ${p.note}`).join('\n')}\n\n## Services\n\n${W.OFFERS.map(o => `- **${o.name}**: ${o.what}`).join('\n')}\n\n## Writing\n\n${W.POSTS.slice(0, 10).map(p => `- ${L(p.title, `/writing/${p.slug}/`)}`).join('\n')}\n\n${contactMd()}`;
   if (n === 'work') return `# Work: eight systems in production\n\n${W.PROJECTS.map(p => `## ${p.n}. ${p.name}\n\n${p.result}. ${p.note}\n\n${L('Read the project', `/work/${p.slug}/`)}`).join('\n\n')}\n`;
   if (n === 'project') { const p = proj(a), cs = p.caseStudy;
     let o = `# ${p.name}\n\n**Result:** ${p.result}  \n**Category:** ${cat(p.category).name}  \n**Stack:** ${p.techs.map(t => tech(t)?.name).filter(Boolean).join(', ') || 'Not listed yet'}\n\n${p.note}\n`;
@@ -153,10 +153,10 @@ function mdFor([n, a]) {
     if (p.testimonial) o += `\n> “${p.testimonial.quote}” ${p.testimonial.name}, ${p.testimonial.role}\n`;
     return o + `\nScreenshots are blurred and anonymised. Page: ${abs(`/work/${a}/`)}\n`; }
   if (n === 'services') return `# Services: three ways to work together\n\nEach one starts with a 20-minute call. Every engagement is quoted after the call.\n\n${W.OFFERS.map(o => `## ${o.name}\n\n${o.what}\n\n${o.facts.map(([k, v]) => `- ${k}: ${v}`).join('\n')}`).join('\n\n')}\n\n## How a project runs\n\n${W.PROCESS.map(([h, t], i) => `${i + 1}. **${h}.** ${t}`).join('\n')}\n\n## Questions founders ask\n\n${W.FAQ.map(([q, ans]) => `### ${q}\n\n${ans}`).join('\n\n')}\n\n${contactMd()}`;
-  if (n === 'about') return `# About Venus Paneliya\n\nOne developer. Full ownership. Production-ready software.\n\nI’m Venus Paneliya, a full-stack AI engineer working in MERN, Next.js and TypeScript, moving toward AI solutions architecture. I work from Surat, India, with founders and teams in the US, UK, EU, Middle East and APAC.\n\n## Experience\n\n${W.EXPERIENCE.map(r => `- **${r.title}, ${r.org}** (${r.when}, ${r.where}). ${r.text}`).join('\n')}\n\n## Education and certificates\n\n${W.EDUCATION.map(([k, v]) => `- ${k}: ${v}`).join('\n')}\n\n## Stack\n\n${W.TECH_GROUPS.map(g => `- **${g.name}:** ${g.items.map(t => t.name).join(', ')}`).join('\n')}\n\n## What clients say\n\n${W.TESTIMONIALS.map(t => `> “${t.quote}” ${t.name}, ${t.role}`).join('\n\n')}\n\n${contactMd()}`;
+  if (n === 'about') return `# About Venus Paneliya\n\nOne developer. Full ownership. Production-ready software.\n\nI’m Venus Paneliya, a senior full-stack engineer working in MERN, Next.js and TypeScript, moving toward AI solutions architecture. I work from Surat, India, with founders and teams in the US, UK, EU, Middle East and APAC.\n\n## Experience\n\n${W.EXPERIENCE.map(r => `- **${r.title}, ${r.org}** (${r.when}, ${r.where}). ${r.text}`).join('\n')}\n\n## Education and certificates\n\n${W.EDUCATION.map(([k, v]) => `- ${k}: ${v}`).join('\n')}\n\n## Stack\n\n${W.TECH_GROUPS.map(g => `- **${g.name}:** ${g.items.map(t => t.name).join(', ')}`).join('\n')}\n\n## What clients say\n\n${W.TESTIMONIALS.map(t => `> “${t.quote}” ${t.name}, ${t.role}`).join('\n\n')}\n\n${contactMd()}`;
   if (n === 'contact') return `# Contact Venus Paneliya\n\nSend me your prototype’s link. I read every message the same day, then we talk for twenty minutes about what breaks first.\n\n${contactMd()}`;
   if (n === 'writing') return `# Notes from production\n\nFor founders: what AI tools skip, and what it costs later. By Venus Paneliya.\n\n${W.POSTS.map(p => `- ${L(p.title, `/writing/${p.slug}/`)} (${cat(p.category).name}): ${p.excerpt}`).join('\n')}\n`;
-  if (n === 'post') { const p = W.POSTS.find(x => x.slug === a); return `# ${p.title}\n\nBy Venus Paneliya, full-stack AI engineer. Category: ${cat(p.category).name}. Originally posted on LinkedIn.\n\n${p.body}\n${p.carousel ? `\nThe original post includes a document: ${p.carousel}.\n` : ''}\nCanonical: ${abs(`/writing/${a}/`)}\n`; }
+  if (n === 'post') { const p = W.POSTS.find(x => x.slug === a); return `# ${p.title}\n\nBy Venus Paneliya, senior full-stack engineer. Category: ${cat(p.category).name}. Originally posted on LinkedIn.\n\n${p.body}\n${p.carousel ? `\nThe original post includes a document: ${p.carousel}.\n` : ''}\nCanonical: ${abs(`/writing/${a}/`)}\n`; }
   if (n === 'categories') return `# Categories\n\n${W.CATEGORIES.map(c => `- ${L(c.name, `/categories/${c.slug}/`)}: ${c.intro}`).join('\n')}\n`;
   if (n === 'category') { const c = cat(a); return `# ${c.name}\n\n${c.intro}\n\n## Projects\n\n${W.PROJECTS.filter(p => p.category === a).map(p => `- ${L(p.name, `/work/${p.slug}/`)}: ${p.result}`).join('\n') || 'None yet.'}\n\n## Notes\n\n${W.POSTS.filter(p => p.category === a).map(p => `- ${L(p.title, `/writing/${p.slug}/`)}`).join('\n') || 'None yet.'}\n`; }
   if (n === 'technologies') return `# The stack\n\n${W.TECH_GROUPS.map(g => `## ${g.name}\n\n${g.items.map(t => `- ${L(t.name, `/stack/${t.slug}/`)}: ${t.about}`).join('\n')}`).join('\n\n')}\n`;
@@ -174,7 +174,7 @@ function page(r, out) {
   const v = V[n](a);
   if (!v) throw new Error('No view for ' + r.join('-'));
   const p = out || pathOf(r), url = abs(p);
-  const title = v.title ? `${v.title.replace(/\.$/, '')}, Venus Paneliya` : 'Venus Paneliya, full-stack AI engineer. Prototype in. Production out.';
+  const title = v.title ? `${v.title.replace(/\.$/, '')}, Venus Paneliya` : 'Venus Paneliya, senior full-stack engineer. Prototype in. Production out.';
   const desc = trim(v.desc || 'I take AI-built SaaS prototypes from Cursor, v0, Bolt, Lovable and ChatGPT and make them production-grade: architecture, security, multi-tenancy and payments.');
   const og = n === 'notfound' ? '/assets/og-image.png' : ogFile(ogKey(r));
   const meta = { title, desc, og };
@@ -195,7 +195,7 @@ function page(r, out) {
     `<meta property="og:type" content="${post ? 'article' : n === 'about' ? 'profile' : 'website'}">`,
     '<meta property="og:site_name" content="venuspaneliya.com">',
     '<meta property="og:locale" content="en_US">',
-    `<meta property="og:title" content="${esc(v.title ? v.title : 'Venus Paneliya, full-stack AI engineer')}">`,
+    `<meta property="og:title" content="${esc(v.title ? v.title : 'Venus Paneliya, senior full-stack engineer')}">`,
     `<meta property="og:description" content="${esc(desc)}">`,
     `<meta property="og:url" content="${url}">`,
     `<meta property="og:image" content="${abs(og)}">`,
@@ -206,7 +206,7 @@ function page(r, out) {
     post ? (post.techs || []).map(t => `<meta property="article:tag" content="${esc(tech(t)?.name || t)}">`).join('') : '',
     n === 'about' ? '<meta property="profile:first_name" content="Venus"><meta property="profile:last_name" content="Paneliya">' : '',
     '<meta name="twitter:card" content="summary_large_image">',
-    `<meta name="twitter:title" content="${esc(v.title || 'Venus Paneliya, full-stack AI engineer')}">`,
+    `<meta name="twitter:title" content="${esc(v.title || 'Venus Paneliya, senior full-stack engineer')}">`,
     `<meta name="twitter:description" content="${esc(desc)}">`,
     `<meta name="twitter:image" content="${abs(og)}">`,
     n === 'notfound' ? '' : `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graphFor(r, meta) }).replace(/</g, '\\u003c')}</script>`
@@ -238,9 +238,9 @@ write('feed.json', JSON.stringify({ version: 'https://jsonfeed.org/version/1.1',
 const mdLink = pg => `${pg.url}index.md`;
 const sec = (title, list) => `## ${title}\n\n${list.map(pg => `- [${pg.title.replace(/, Venus Paneliya$/, '')}](${mdLink(pg)}): ${pg.desc}`).join('\n')}\n`;
 const by = n => pages.filter(pg => pg.r[0] === n);
-write('llms.txt', `# Venus Paneliya\n\n> Full-stack AI engineer (MERN, Next.js, TypeScript) who takes AI-built SaaS prototypes from Cursor, v0, Bolt, Lovable and ChatGPT and makes them production-grade: architecture, security, multi-tenancy and payments. ${S.availability} Available hourly, on a monthly retainer, or full-time remote, for clients in the US, UK, EU, Middle East and APAC. Based in Surat, India.\n\nEvery page on this site has a Markdown version at the same URL plus \`index.md\`. Facts and figures come from systems Venus built and runs in production; client names stay private unless the client recommended him publicly. Contact: ${S.email}, ${S.phone} (phone and WhatsApp), ${S.booking}.\n\n${sec('Core pages', [...by('home'), ...by('about'), ...by('services'), ...by('contact')])}\n${sec('Work', [...by('work'), ...by('project')])}\n${sec('Writing', [...by('writing'), ...by('post')])}\n${sec('Stack', [...by('technologies'), ...by('tech')])}\n## Optional\n\n${[...by('categories'), ...by('category')].map(pg => `- [${pg.title.replace(/, Venus Paneliya$/, '')}](${mdLink(pg)}): ${pg.desc}`).join('\n')}\n- [Full site in one file](${PROD}/llms-full.txt): every page above, in Markdown\n- [RSS feed](${PROD}/feed.xml)\n`);
+write('llms.txt', `# Venus Paneliya\n\n> Senior full-stack engineer (MERN, Next.js, TypeScript) who takes AI-built SaaS prototypes from Cursor, v0, Bolt, Lovable and ChatGPT and makes them production-grade: architecture, security, multi-tenancy and payments. ${S.availability} Available hourly, on a monthly retainer, or full-time remote, for clients in the US, UK, EU, Middle East and APAC. Based in Surat, India.\n\nEvery page on this site has a Markdown version at the same URL plus \`index.md\`. Facts and figures come from systems Venus built and runs in production; client names stay private unless the client recommended him publicly. Contact: ${S.email}, ${S.phone} (phone and WhatsApp), ${S.booking}.\n\n${sec('Core pages', [...by('home'), ...by('about'), ...by('services'), ...by('contact')])}\n${sec('Work', [...by('work'), ...by('project')])}\n${sec('Writing', [...by('writing'), ...by('post')])}\n${sec('Stack', [...by('technologies'), ...by('tech')])}\n## Optional\n\n${[...by('categories'), ...by('category')].map(pg => `- [${pg.title.replace(/, Venus Paneliya$/, '')}](${mdLink(pg)}): ${pg.desc}`).join('\n')}\n- [Full site in one file](${PROD}/llms-full.txt): every page above, in Markdown\n- [RSS feed](${PROD}/feed.xml)\n`);
 write('llms-full.txt', `# venuspaneliya.com, full text\n\nGenerated ${TODAY}. Source: ${PROD}/llms.txt\n\n` + pages.map(pg => `---\nURL: ${pg.url}\n---\n\n${pg.md.trim()}\n`).join('\n'));
-write('manifest.webmanifest', JSON.stringify({ name: 'Venus Paneliya, full-stack AI engineer', short_name: 'venuspaneliya', description: 'Prototype in. Production out.', start_url: '/', scope: '/', display: 'browser', background_color: '#F6F5F1', theme_color: '#F6F5F1', lang: 'en', icons: [{ src: '/assets/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/assets/icon-512.png', sizes: '512x512', type: 'image/png' }, { src: '/assets/favicon.svg', sizes: 'any', type: 'image/svg+xml' }] }, null, 2));
+write('manifest.webmanifest', JSON.stringify({ name: 'Venus Paneliya, senior full-stack engineer', short_name: 'venuspaneliya', description: 'Prototype in. Production out.', start_url: '/', scope: '/', display: 'browser', background_color: '#F6F5F1', theme_color: '#F6F5F1', lang: 'en', icons: [{ src: '/assets/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/assets/icon-512.png', sizes: '512x512', type: 'image/png' }, { src: '/assets/favicon.svg', sizes: 'any', type: 'image/svg+xml' }] }, null, 2));
 write('humans.txt', `/* TEAM */\nEngineer, writer and owner: Venus Paneliya\nSite: ${PROD}\nContact: ${S.email}\nLinkedIn: ${S.linkedin}\nFrom: Surat, Gujarat, India\n\n/* SITE */\nLast update: ${TODAY}\nStandards: HTML5, CSS3, schema.org, llms.txt\nComponents: hand-built HTML, CSS and JavaScript on the venuspaneliya.com design system\nFonts: Geist, Geist Mono\n`);
 const exp = new Date(Date.now() + 365 * 864e5).toISOString().replace(/\.\d+Z$/, 'Z');
 write('.well-known/security.txt', `Contact: mailto:${S.email}\nExpires: ${exp}\nPreferred-Languages: en\nCanonical: ${PROD}/.well-known/security.txt\n`);
